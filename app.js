@@ -74,36 +74,3 @@ function textoExibidoDoSorteio(){
     texto.textContent = 'O amigo sorteado é:'
 }
 
-
-
-
-
-//let listaNomes = [];
-
-//function adcionarAmigo(onclick) {
-//    console.log('Função adcionarAmigo chamada');
-//}
-
-// function adcionarAmigo() {
-//    let nomeAmigo = document.getElementById('amigo').value;
-  //  if (nomeAmigo) {
-    //    listaNomes.push(nomeAmigo);
-      //  document.getElementById('amigo').value = '';
-        //atualizarLista();
-   // } else {
-     //   alert('Por favor, insira um nome válido.');
-    //}
-//}
-
-//function exibirAmigos() {
-  //  if (listaNomes.length > 0) {
-    //    let lista = document.getElementById('listaAmigos');
-      //  lista.innerHTML = ''; // Limpa a lista antes de exibir
-        //listaNomes.forEach((nome, index) => {
-          //  let item = document.createElement('li');
-            //item.textContent = nome;
-            //console.log();
-        //});
-
-    //}
-//}
