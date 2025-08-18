@@ -1,4 +1,5 @@
 let listaNomes = [];
+let verificarSorteio = false;
 
 function adicionarAmigo() {
     let nomeAmigo = document.getElementById('amigo').value;
@@ -6,7 +7,7 @@ function adicionarAmigo() {
     if (nomeAmigo.trim() !== "") {
         listaNomes.push(nomeAmigo);
         document.getElementById('amigo').value = '';
-        
+                        
         // Chama a função para atualizar a lista na tela
         atualizarLista();
     } else {
@@ -61,16 +62,32 @@ function sortearAmigo() {
     let amigoSorteado = listaNomes[indiceSorteado];
     
     // Exibe o nome do amigo sorteado na tela
-    document.getElementById('resultado').textContent = amigoSorteado;
+    // document.getElementById('resultado').textContent = amigoSorteado;
     
+    verificarSorteio = true;    
     // Atualiza o texto exibido
-    textoExibidoDoSorteio();
+    textoExibidoDoSorteio(amigoSorteado);
+    document.getElementById('restart').style.display='';
     }
 }
 
-
-function textoExibidoDoSorteio(){
-    let texto = document.getElementsByClassName('section-title')[0];
-    texto.textContent = 'O amigo sorteado é:'
+function limparSorteio(){
+    if (verificarSorteio === true) {
+        listaNomes = [];
+        atualizarLista();
+    }
 }
+
+function textoExibidoDoSorteio(amigoSorteado){
+    let texto = document.getElementById('title');
+    texto.textContent = 'O amigo sorteado é: '+ amigoSorteado;
+}
+
+function novoSorteio(){
+    document.getElementById('title').textContent = 'Digite o nome dos seus amigos';
+    limparSorteio();
+    document.getElementById('restart').style.display='none';
+}
+
+
 
