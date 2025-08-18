@@ -20,5 +20,6 @@ Uma página em que a pessoa usuária insere os nomes dos amigos que ela quer rea
     CSS
 
 Desenvolvido por:
+
 <img loading="lazy" src="https://avatars.githubusercontent.com/u/212180122?v=4" width=115><br><sub>(https://github.com/sicdzo)
 </sub>
