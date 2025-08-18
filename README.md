@@ -19,11 +19,11 @@ Obrigada por ver e compartilhar sua opinião!
 
  Linguagens utilizadas:
  
-
-    Javascript
-    HTML
-    CSS
+Javascript
+HTML
+CSS
 
 Desenvolvido por:
+
 <img loading="lazy" src="https://avatars.githubusercontent.com/u/212180122?v=4" width=115><br><sub>(https://github.com/sicdzo)
 </sub>
