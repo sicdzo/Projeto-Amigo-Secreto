@@ -14,9 +14,9 @@ Uma página em que a pessoa usuária insere os nomes dos amigos que ela quer rea
  
  Linguagens utilizadas:
  
-*Javascript*
-*HTML*
-*CSS*
+Javascript
+HTML
+CSS
 
 Desenvolvido por:
 
