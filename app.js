@@ -3,11 +3,9 @@ let verificarSorteio = false;
 
 function adicionarAmigo() {
     let nomeAmigo = document.getElementById('amigo').value;
-    
     if (nomeAmigo.trim() !== "") {
         listaNomes.push(nomeAmigo);
         document.getElementById('amigo').value = '';
-                        
         // Chama a função para atualizar a lista na tela
         atualizarLista();
     } else {
@@ -17,22 +15,18 @@ function adicionarAmigo() {
 
 // Função para atualizar a lista de amigos no HTML
 function atualizarLista() {
-    // 1. Obter a referência do <ul> no HTML
+    // Obtém a referência do <ul> no HTML
     let listaAmigosNoHTML = document.getElementById('listaAmigos');
-    
-    // 2. Limpar o conteúdo atual da lista
+    // Limpa o conteúdo atual da lista
     listaAmigosNoHTML.innerHTML = '';
-
-    // 3. Repetir sobre o array e criar os elementos <li>
+    // Repete sobre o array e cria os elementos <li>
     if (listaNomes.length > 0) {
         listaNomes.forEach(nome => {
-            // 4. Criar um novo elemento <li>
+            // Criar um novo elemento <li>
             let li = document.createElement('li');
-            
-            // 5. Definir o texto do <li>
+            // Definir o texto do <li>
             li.textContent = nome;
-            
-            // 6. Adicionar o <li> ao <ul>
+            // Adicionar o <li> ao <ul>
             listaAmigosNoHTML.appendChild(li);
         });
     }
@@ -54,23 +48,21 @@ function sortearAmigo() {
         return;
     }
     else {
-
     // Gera um número aleatório baseado no tamanho da lista
     let indiceSorteado = Math.floor(Math.random() * listaNomes.length);
-    
     // Obtém o nome do amigo sorteado
     let amigoSorteado = listaNomes[indiceSorteado];
-    
     // Exibe o nome do amigo sorteado na tela
+    // Abaixo, uma outra forma de chamar o texto do resultado de acordo com o id do HTML, foi comentado pois a condição de mudar o texto foi alterada.
     // document.getElementById('resultado').textContent = amigoSorteado;
-    
+    // Validador para acionar a função de exibir sorteado
     verificarSorteio = true;    
     // Atualiza o texto exibido
     textoExibidoDoSorteio(amigoSorteado);
     document.getElementById('restart').style.display='';
     }
 }
-
+// Função em que se o sorteio foi realizado, limpa a lista de nomes e renderiza na tela
 function limparSorteio(){
     if (verificarSorteio === true) {
         listaNomes = [];
@@ -88,6 +80,4 @@ function novoSorteio(){
     limparSorteio();
     document.getElementById('restart').style.display='none';
 }
-
-
 
